@@ -10,17 +10,41 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ 
+ *= require normalize-rails
  *= require_tree .
  *= require_self
  */
 
-html, head, body, div{
-   margin: 0px;
-   padding: 0px;
- }
- 
+ html, body {
+  margin:0;
+  padding:0;
+  width:100%;
+  background-image: linear-gradient(45deg,#e2e6ea, #dfedef, #eff5fc);
+}
 
- .primary-header{
-   margin: 0px;
-   background-color: indigo;
- }
+/* header */
+
+header {
+  display: flex;
+  background-color: #4267b2;
+  padding: 10px 40px;
+  justify-content: space-between;
+  color: white;
+}
+
+.nav-items{
+  display: flex;
+  width: 400px;
+  justify-content: space-evenly;
+}
+
+.nav-item{
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main-section{
+  margin: 20px;
+}

@@ -4,6 +4,9 @@
 
 <p>email: <%= @user.email %></p>
 
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+
 <h2>User's Posts<p>
 
     <% @user.posts.each do |post| %>
@@ -16,5 +19,9 @@
     <% end %>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+
+
+
+
+
+

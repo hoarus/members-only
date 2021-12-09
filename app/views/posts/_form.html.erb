@@ -11,7 +11,17 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form_with model: @post do |form| %>
+    <%= form.label :title, "Title:" %>
+    <%= form.text_field :title %>
+    <br><br>
+    <%= form.label :body, "Body:"%>
+    <%= form.text_field :body, placeholder: "Body goes here"  %>
+    <br><br>
+    <%= form.label :user_id, "used_id (temp):" %>
+    <%= form.text_field :user_id, placeholder: "1" %>
+    <br><br>
+    <%= form.submit "Create" %>
+  <% end %>
+
 <% end %>

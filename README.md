@@ -22,3 +22,13 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Desired Functionality:
+
+  Posts:
+  - Error messages up top
+  - Ability to link to user
+
+  Users:
+  - See all posts
+  - Create a new post

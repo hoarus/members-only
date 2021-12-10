@@ -1,34 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<p class="summary-text">
+  The purpose of this website is to demonstrate different functionality depending on whether or not the user is logged in. If you are not logged in, you are unable to see the authors of the blog posts. However, if you sign in, you are able to create new posts, edit your own posts and view the authors of all posts.
+<p>
 
+<h1 class="page-header">Posts</h1>
+
+
+
+
+<section class="posts-container">
+  <%= link_to 'New Post', new_post_path, class:"new-post" %>
 <% @posts.each do |post| %>
-  <div>
-    <h3><%= post.title %></h3>
-    <h5>Author: 
+  <div class="post-container">
+    <h3><%= link_to post.title, post, class:"post-link" %></h3>
+    <h5>
       <% if user_signed_in? %>
+        Author: 
         <% if post.user.username == current_user.username %>
           You
         <% else %>
           <%= post.user.username %>
         <% end %>
       <% else %>
-        ???
+        Secret Author
       <% end %>
     </h5>
     <p><%= post.body %></p>
     <table>
         <tr>
-          <td><%= link_to 'Show', post %></td>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% if user_signed_in? %>
+            <% if post.user.username == current_user.username %>
+              <td><%= link_to 'Edit', edit_post_path(post) %></td>
+              <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+          <% end %>
         </tr>
     </table>
   </div>
 <% end %>
+</section>
 
 
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>

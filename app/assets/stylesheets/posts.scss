@@ -1,3 +1,49 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.summary-text{
+  font-size: 20px;
+  word-spacing: 20%;
+  line-height: 120%;
+}
+
+.posts-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-container{
+  background-color: white;
+  border: 1px solid lightgray;
+  width: 500px;
+  padding: 20px;
+}
+
+.post-link:visited{
+  color: black;
+}
+
+.post-link:hover{
+  color: grey;
+}
+
+.nav-button{
+  width: 200px;
+  color: black;
+  margin: 10px 0px;
+}
+
+.new-post{
+  background-color: white;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  border: solid 1px lightgrey;
+  border-radius: 5px;
+}

@@ -45,6 +45,16 @@ header {
   font-weight: 700;
 }
 
+.nav-link:link, .nav-link:visited{
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover{
+  color: gray;
+  background-color: transparent;
+}
+
 .main-section{
   margin: 20px;
 }
